@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import s from "./Feedback.module.css";
 
@@ -26,6 +26,12 @@ const Feedback = ({ onClickLike, onClickNeutral, onClickBad }) => {
       </ul>
     </div>
   );
+};
+
+Feedback.propTypes = {
+  onClickLike: PropTypes.func.isRequired,
+  onClickNeutral: PropTypes.func.isRequired,
+  onClickBad: PropTypes.func.isRequired,
 };
 
 export default Feedback;
